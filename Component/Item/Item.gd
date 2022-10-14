@@ -1,18 +1,20 @@
 extends Node2D
 
-var DropPoint
+onready var DropPoint = global_position
 var DropPoint_list:Array = []
 
-export(NodePath) var textadd
-
-onready var popText = get_node(textadd)
+onready var popText = preload("res://Component/PopText/popText.tscn")
 
 var selected:bool
 
 func _ready():
 	DropPoint_list = get_tree().get_nodes_in_group("DropPoint")
-	DropPoint = DropPoint_list[0].global_position
-	DropPoint_list[0].select()
+	
+	for point in DropPoint_list:
+			var distance = global_position.distance_to(point.global_position)
+			if distance < point.radius:
+				point.select()
+				DropPoint = point.global_position
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
@@ -27,7 +29,10 @@ func _physics_process(delta):
 func _input(event):
 	if Input.is_action_just_released("click"):
 		if selected == true:
-			popText.pop_zoom("text:String", 5)
+			var new_popText = popText.instance()
+			new_popText.global_position = Vector2.ONE*get_viewport_rect().size/2
+			get_tree().current_scene.add_child(new_popText)
+			new_popText.pop_zoom("text:String", 5)
 		selected = false
 		for point in DropPoint_list:
 			var distance = global_position.distance_to(point.global_position)
@@ -36,5 +41,3 @@ func _input(event):
 				DropPoint = point.global_position
 		
 
-func droped():
-	pass

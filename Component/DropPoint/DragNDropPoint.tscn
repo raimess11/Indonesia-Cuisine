@@ -4,4 +4,3 @@
 
 [node name="DragNDropPoint" type="Node2D" groups=["DropPoint"]]
 script = ExtResource( 1 )
-radius = 10

@@ -20,7 +20,6 @@ radius = 200
 
 [node name="Item" parent="." instance=ExtResource( 2 )]
 position = Vector2( 632, 231 )
-textadd = NodePath("../popText")
 
 [node name="popText" parent="." instance=ExtResource( 3 )]
 position = Vector2( 519, 106 )

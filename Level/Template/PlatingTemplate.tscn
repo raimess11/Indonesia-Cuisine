@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Component/Item/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Component/InfomationBox/InfomationBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Component/DropPoint/DragNDropPoint.tscn" type="PackedScene" id=3]
+
+[node name="Level" type="Node2D"]
+
+[node name="DragNDropPoint" parent="." instance=ExtResource( 3 )]
+position = Vector2( 492, 469 )
+
+[node name="DragNDropPoint3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 303, 465 )
+
+[node name="DragNDropPoint4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 682, 465 )
+
+[node name="Item2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 309, 461 )
+
+[node name="Item3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 190, 465 )
+
+[node name="Item4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 488, 471 )
+
+[node name="Item5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 681, 463 )
+
+[node name="DragNDropPoint2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 199, 468 )
+
+[node name="InfomationBox" parent="." instance=ExtResource( 2 )]
+margin_left = 758.0
+margin_top = 28.0
+margin_right = 1043.0
+margin_bottom = 492.0

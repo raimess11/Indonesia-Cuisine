@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Component/Item/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Component/InfomationBox/InfomationBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Component/DropPoint/DragNDropPoint.tscn" type="PackedScene" id=3]
+
+[node name="Level" type="Node2D"]
+
+[node name="bahan1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 135, 233 )
+
+[node name="InfomationBox" parent="bahan1" instance=ExtResource( 2 )]
+margin_left = 610.0
+margin_top = -204.0
+margin_right = 895.0
+margin_bottom = 260.0
+
+[node name="WADAH" parent="." instance=ExtResource( 3 )]
+position = Vector2( 499, 497 )
+
+[node name="bahan2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 137, 328 )
+
+[node name="bahan3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 135, 143 )
+
+[node name="bahan4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 237, 141 )
+
+[node name="bahan7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 457, 237 )
+
+[node name="bahan8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559, 235 )
+
+[node name="bahan5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 235, 230 )
+
+[node name="bahan6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 233, 326 )
+
+[node name="Item" parent="." instance=ExtResource( 1 )]
+position = Vector2( 499, 491 )
+
+[node name="Item2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 327 )
+
+[node name="Item3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 131, 335 )
+
+[node name="Item4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 127, 241 )
+
+[node name="Item5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 229, 233 )
+
+[node name="Item6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138, 137 )
+
+[node name="Item7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 246, 143 )
+
+[node name="Item8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 463, 237 )
+
+[node name="Item9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 557, 235 )

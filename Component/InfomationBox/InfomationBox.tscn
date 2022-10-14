@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Component/InfomationBox/InfomationBox.gd" type="Script" id=1]
+
+[node name="InfomationBox" type="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -348.0
+margin_top = 58.0
+margin_right = -63.0
+margin_bottom = 522.0
+script = ExtResource( 1 )
+Objective_list = [ "Objective nasi goreng", "Resep Nasi putih" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ObjectiveSection" type="AspectRatioContainer" parent="VBoxContainer"]
+margin_right = 285.0
+margin_bottom = 230.0
+size_flags_vertical = 3
+
+[node name="OBJECTIVE" type="VBoxContainer" parent="VBoxContainer/ObjectiveSection"]
+margin_left = 27.5
+margin_right = 257.5
+margin_bottom = 230.0
+
+[node name="OBJECTIVE" type="Label" parent="VBoxContainer/ObjectiveSection/OBJECTIVE"]
+margin_right = 230.0
+margin_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "OBJECTIVE"
+
+[node name="ResepSection" type="AspectRatioContainer" parent="VBoxContainer"]
+margin_top = 234.0
+margin_right = 285.0
+margin_bottom = 464.0
+size_flags_vertical = 3
+
+[node name="RESEP" type="VBoxContainer" parent="VBoxContainer/ResepSection"]
+margin_left = 27.5
+margin_right = 257.5
+margin_bottom = 230.0
+
+[node name="RESEP" type="Label" parent="VBoxContainer/ResepSection/RESEP"]
+margin_right = 230.0
+margin_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "RESEP"

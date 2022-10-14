@@ -24,8 +24,7 @@ func _ready():
 	for makanan in scene_list:
 		var button = Button.new()
 		button.connect("button_down",self,"hidangan_selected",[makanan])
-		button.size_flags_horizontal = 3
-		button.size_flags_vertical = 3
+		button.rect_min_size.y = 80
 		MenuHidangan.add_child(button)
 
 func hidangan_selected(makanan:String):

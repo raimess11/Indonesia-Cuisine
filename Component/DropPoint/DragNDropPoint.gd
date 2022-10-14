@@ -1,6 +1,13 @@
 extends Node2D
 
-export var radius:int
+var radius:int = 10
+
+onready var item = preload("res://Component/Item/Item.tscn")
+
+#func _ready():
+#	var new_item = item.instance()
+#	new_item.global_position = global_position
+#	get_tree().current_scene.add_child(new_item)
 
 func _draw():
 	draw_circle(Vector2.ZERO, radius, Color.moccasin)

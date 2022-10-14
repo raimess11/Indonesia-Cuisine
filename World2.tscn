@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Component/DropPoint/DragNDropPoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Component/Item/Item.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Component/PopText/popText.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Component/InfomationBox/InfomationBox.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
 
@@ -20,7 +20,9 @@ radius = 200
 
 [node name="Item" parent="." instance=ExtResource( 2 )]
 position = Vector2( 632, 231 )
-textadd = NodePath("../popText")
 
-[node name="popText" parent="." instance=ExtResource( 3 )]
-position = Vector2( 551, 182 )
+[node name="InfomationBox" parent="." instance=ExtResource( 4 )]
+margin_left = 728.0
+margin_top = 34.0
+margin_right = 1013.0
+margin_bottom = 498.0

@@ -7,6 +7,10 @@ var max_zoom = 2
 var zoom = 1
 var show = false
 
+func _ready():
+	#label.rect_pivot_offset.x = label.rect_size.x
+	pass
+
 func _physics_process(delta):
 	if !show:
 		return
